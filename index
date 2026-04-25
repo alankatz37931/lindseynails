@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lindsey Nails - Expertos en Uñas a Domicilio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap');
+
+        :root {
+            --primary: #d4a373;
+            --secondary: #faedcd;
+            --accent: #ccd5ae;
+            --dark: #1d1d1d;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .service-card:hover, .testimonial-card:hover, .gallery-item:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .custom-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+
+        @media (min-width: 768px) {
+            .whatsapp-float {
+                bottom: 30px;
+                right: 30px;
+                width: 65px;
+                height: 65px;
+                font-size: 32px;
+            }
+        }
+
+        .whatsapp-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #ff4b2b;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 2px solid white;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 75, 43, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(255, 75, 43, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 75, 43, 0); }
+        }
+
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        #mobile-menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <!-- Announcement Bar -->
+    <div class="bg-amber-100 text-amber-900 text-[10px] md:text-xs py-2 text-center font-bold uppercase tracking-[0.2em] fixed w-full z-[60] top-0">
+        ✨ Lindsey Nails: Especialistas 100% a domicilio en Mixco y San Cristóbal ✨
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quisiera%20agendar%20un%20servicio%20a%20domicilio" target="_blank" class="whatsapp-float" title="Chatea con nosotros">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-badge"></span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 top-8 md:top-10">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+            <div class="text-xl md:text-2xl font-bold tracking-widest uppercase serif text-stone-900">Lindsey Nails</div>
+            
+            <div class="hidden lg:flex space-x-8 text-sm font-medium uppercase tracking-wider">
+                <a href="#inicio" class="hover:text-amber-700 transition">Inicio</a>
+                <a href="#proceso" class="hover:text-amber-700 transition">¿Cómo funciona?</a>
+                <a href="#galeria" class="hover:text-amber-700 transition">Galería</a>
+                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quiero%20reservar%20una%20cita%20a%20domicilio" target="_blank" class="hover:text-amber-700 transition">Contacto</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quiero%20reservar%20una%20cita%20a%20domicilio" target="_blank" class="hidden sm:block bg-stone-900 text-white px-5 md:px-6 py-2 rounded-full text-xs md:text-sm font-semibold hover:bg-amber-800 transition uppercase tracking-wider">
+                    RESERVAR AHORA
+                </a>
+                <button onclick="toggleMobileMenu()" class="lg:hidden text-stone-900 p-2 focus:outline-none" aria-label="Abrir menú">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Side Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-stone-900 lg:hidden">
+        <div class="flex flex-col h-full p-8">
+            <button onclick="toggleMobileMenu()" class="self-end text-white p-2 mb-12">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <div class="flex flex-col space-y-8 text-center">
+                <a href="#inicio" onclick="toggleMobileMenu()" class="text-white text-2xl serif italic">Inicio</a>
+                <a href="#proceso" onclick="toggleMobileMenu()" class="text-white text-2xl serif italic">¿Cómo funciona?</a>
+                <a href="#galeria" onclick="toggleMobileMenu()" class="text-white text-2xl serif italic">Galería</a>
+                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quiero%20reservar%20una%20cita%20a%20domicilio" target="_blank" class="text-white text-2xl serif italic">Contacto</a>
+                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quiero%20reservar%20una%20cita%20a%20domicilio" target="_blank" class="bg-amber-100 text-stone-900 py-4 rounded-full font-bold uppercase tracking-widest text-sm">AGENDAR CITA</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-gradient min-h-[90vh] flex items-center justify-center text-center text-white px-6 pt-32 md:pt-0">
+        <div class="max-w-3xl">
+            <span class="uppercase tracking-[0.2em] text-[10px] md:text-sm mb-4 block">Exclusividad en la puerta de tu hogar</span>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 italic leading-tight">El Salón va hacia ti</h1>
+            <p class="text-sm md:text-xl mb-10 font-light opacity-90 max-w-xl mx-auto">En <strong>Lindsey Nails</strong> somos expertos en esculpido y nail art con servicio 100% a domicilio. Olvídate del tráfico y disfruta de una experiencia de lujo privada.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#servicios" class="w-full sm:w-auto bg-white/20 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-full font-bold hover:bg-white hover:text-stone-900 transition text-xs uppercase tracking-widest">Ver Servicios</a>
+                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quiero%20agendar%20un%20servicio%20a%20domicilio" target="_blank" class="w-full sm:w-auto bg-amber-100 text-stone-900 px-8 py-4 rounded-full font-bold hover:bg-white transition text-xs uppercase tracking-widest">Agendar mi Turno</a>
+            </div>
+        </div>
+    </section>
+
+        <!-- Gallery Section -->
+    <section id="galeria" class="py-16 md:py-24 bg-stone-100">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 italic">Nuestro Trabajo</h2>
+                <p class="text-stone-500 uppercase tracking-widest text-[10px] md:text-xs">Arte creado por Lindsey Nails</p>
+            </div>
+            
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+                <div class="aspect-square bg-stone-300 rounded-xl overflow-hidden group relative gallery-item shadow-sm">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/manicura-minimalista-1673724282.jpeg?crop=1.00xw:0.462xh;0,0.121xh&resize=1200:*" alt="Nail Art Minimalista" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-stone-900/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-xs md:text-sm font-medium tracking-widest uppercase">Minimalista</div>
+                </div>
+                <div class="aspect-square bg-stone-300 rounded-xl overflow-hidden group relative gallery-item shadow-sm">
+                    <img src="https://ffashionfrenzy.com/cdn/shop/articles/main_b2021a5a-aa7b-4fdf-8cf4-54165471e328_0.png?v=1746130037&width=1100" alt="Nail Art Elegante" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-stone-900/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-xs md:text-sm font-medium tracking-widest uppercase">Elegancia</div>
+                </div>
+                <div class="aspect-square bg-stone-300 rounded-xl overflow-hidden group relative gallery-item shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=800&q=80" alt="Nail Art Glitter" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-stone-900/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-xs md:text-sm font-medium tracking-widest uppercase">Glitter</div>
+                </div>
+                <div class="aspect-square bg-stone-300 rounded-xl overflow-hidden group relative gallery-item shadow-sm">
+                    <img src="https://cosmetologas.com/wp-content/uploads/2025/08/french_nails_disenos_03_0825.jpg" alt="Nail Art Francés" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-stone-900/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-xs md:text-sm font-medium tracking-widest uppercase">Francés</div>
+                </div>
+                <div class="aspect-square bg-stone-300 rounded-xl overflow-hidden group relative gallery-item shadow-sm">
+                    <img src="https://i.pinimg.com/736x/50/cb/f0/50cbf0096c59f4ba1d958e8cad79ce22.jpg" alt="Acrilicas" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-stone-900/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-xs md:text-sm font-medium tracking-widest uppercase">Acrílicas</div>
+                </div>
+                <div class="aspect-square bg-stone-300 rounded-xl overflow-hidden group relative gallery-item shadow-sm">
+                    <img src="https://belity.app/images/blog/trending_nails_cateye.jpg" alt="Efecto Espejo" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-stone-900/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-xs md:text-sm font-medium tracking-widest uppercase">Mirror Effect</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="py-16 md:py-24 bg-stone-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 italic">Lo que dicen nuestras clientas</h2>
+                <p class="text-stone-400 uppercase tracking-widest text-xs">Experiencias Lindsey Nails</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-stone-800 p-8 rounded-2xl testimonial-card border border-stone-700">
+                    <div class="flex text-amber-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-stone-300 italic mb-6 leading-relaxed">"Increíble no tener que buscar parqueo. Lindsey llegó puntual a mi casa y dejó mis uñas impecables. ¡Súper profesional!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-stone-600 flex items-center justify-center font-bold text-amber-200">V</div>
+                        <div>
+                            <p class="font-bold text-sm">Valeria M.</p>
+                            <p class="text-[10px] text-stone-500 uppercase tracking-tighter">Clienta Fiel</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-stone-800 p-8 rounded-2xl testimonial-card border border-stone-700">
+                    <div class="flex text-amber-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-stone-300 italic mb-6 leading-relaxed">"Para una mamá ocupada, este servicio es oro. Traen todo esterilizado y listo. La calidad de Lindsey Nails es mucho mejor que en muchos salones."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-stone-600 flex items-center justify-center font-bold text-amber-200">C</div>
+                        <div>
+                            <p class="font-bold text-sm">Camila R.</p>
+                            <p class="text-[10px] text-stone-500 uppercase tracking-tighter">Servicio en Casa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-stone-800 p-8 rounded-2xl testimonial-card border border-stone-700">
+                    <div class="flex text-amber-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-stone-300 italic mb-6 leading-relaxed">"Me encanta el Nail Art y Lindsey se toma el tiempo necesario. Es una atención personalizada que no encuentras en locales comerciales."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-stone-600 flex items-center justify-center font-bold text-amber-200">S</div>
+                        <div>
+                            <p class="font-bold text-sm">Sofía L.</p>
+                            <p class="text-[10px] text-stone-500 uppercase tracking-tighter">Nail Art Lover</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- How it works -->
+    <section id="proceso" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 italic">Tu Experiencia Profesional en 3 Pasos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="space-y-4">
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto text-amber-800 text-2xl font-bold">1</div>
+                    <h3 class="font-bold text-xl italic">Reserva</h3>
+                    <p class="text-stone-500 text-sm">Escríbenos por WhatsApp y elige el servicio que deseas realizarte.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto text-amber-800 text-2xl font-bold">2</div>
+                    <h3 class="font-bold text-xl italic">Llegamos</h3>
+                    <p class="text-stone-500 text-sm">Llegamos a tu domicilio con todo el equipo profesional y esterilizado.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto text-amber-800 text-2xl font-bold">3</div>
+                    <h3 class="font-bold text-xl italic">Disfruta</h3>
+                    <p class="text-stone-500 text-sm">Relájate en tu espacio favorito mientras transformamos tus manos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services
+    <section id="servicios" class="py-16 md:py-24 max-w-7xl mx-auto px-6 bg-stone-50 rounded-3xl my-12 custom-shadow">
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 italic">Menu de Servicios Móviles</h2>
+            <div class="w-16 h-1 bg-amber-600 mx-auto mb-6"></div>
+            <p class="text-stone-500 max-w-2xl mx-auto italic text-sm md:text-base">Precios incluyen servicio en Mixco y San Cristóbal. Otras zonas consultan recargo.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div class="bg-white p-6 md:p-8 rounded-2xl border border-stone-100 service-card text-center flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-stone-50 rounded-full flex items-center justify-center mx-auto mb-5 shadow-sm">
+                        <i class="fas fa-magic text-amber-700 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-3">Esmaltado Semi</h3>
+                    <p class="text-stone-500 text-xs md:text-sm mb-6">Color intenso y duradero. Incluye manicura rusa profesional en tu casa.</p>
+                </div>
+                <div>
+                    <span class="text-amber-800 font-bold block mb-4">$30.00</span>
+                    <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quisiera%20agendar%20Esmaltado%20Semi%20a%20domicilio" target="_blank" class="inline-block text-xs font-bold uppercase tracking-widest text-stone-900 border-b-2 border-amber-200 hover:border-amber-600 transition">Agendar</a>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-2xl border-2 border-amber-100 service-card text-center flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-amber-50 rounded-full flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-gem text-amber-700 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-3">Esculpidas Premium</h3>
+                    <p class="text-stone-500 text-xs md:text-sm mb-6">Gel o acrílico con acabado natural. Todo el equipo de salón en tu puerta.</p>
+                </div>
+                <div>
+                    <span class="text-amber-800 font-bold block mb-4">$55.00</span>
+                    <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quisiera%20agendar%20Esculpidas%20a%20domicilio" target="_blank" class="inline-block text-xs font-bold uppercase tracking-widest text-stone-900 border-b-2 border-amber-200 hover:border-amber-600 transition">Agendar</a>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-2xl border border-stone-100 service-card text-center sm:col-span-2 lg:col-span-1 flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-stone-50 rounded-full flex items-center justify-center mx-auto mb-5 shadow-sm">
+                        <i class="fas fa-paint-brush text-amber-700 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-3">Nail Art Artístico</h3>
+                    <p class="text-stone-500 text-xs md:text-sm mb-6">Diseños personalizados a mano alzada. La comodidad de tu hogar para inspirarnos.</p>
+                </div>
+                <div>
+                    <span class="text-amber-800 font-bold block mb-4">Desde $15.00</span>
+                    <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quisiera%20agendar%20Nail%20Art%20a%20domicilio" target="_blank" class="inline-block text-xs font-bold uppercase tracking-widest text-stone-900 border-b-2 border-amber-200 hover:border-amber-600 transition">Agendar</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-stone-900 text-white py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-sm">
+            <div class="sm:col-span-2">
+                <h3 class="text-xl md:text-2xl font-bold mb-6 serif italic">Lindsey Nails</h3>
+                <p class="text-stone-400 mb-8 max-w-xs">Especialistas en manicura profesional y arte en uñas. Servicio a domicilio para tu comodidad y seguridad.</p>
+                <div class="flex space-x-6 text-xl">
+                    <a href="https://www.instagram.com/lpch.nails/" class="hover:text-amber-500 transition" aria-label="Instagram" target="blank" >
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="hover:text-amber-500 transition" aria-label="Facebook" target="blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/50240625011" target="_blank" class="hover:text-amber-500 transition" aria-label="WhatsApp" target="blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 uppercase tracking-widest text-xs">Área de Servicio</h4>
+                <p class="text-stone-400 leading-relaxed">Cobertura Domicilio: Mixco, San Cristóbal y zonas aledañas de Ciudad de Guatemala.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 uppercase tracking-widest text-xs">Contacto</h4>
+                <p class="text-stone-400 leading-relaxed">4062 5011<br>Lun - Sáb: 8:00 - 19:00</p>
+            </div>
+        </div>
+        <div class="text-center mt-12 pt-8 border-t border-stone-800 text-stone-500 text-[10px] md:text-xs px-6 uppercase tracking-widest">
+            &copy; 2026 Lindsey Nails Studio Móvil. Profesionalismo en tu hogar.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('active');
+        }
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+
+        
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-CONVERSION_ID');
+    </script>
+</body>
+</html>
