@@ -6,6 +6,18 @@
     <title>Lindsey Nail's & Beauty - Uñas Acrílicas y Belleza a Domicilio</title>
     <meta name="description" content="Especialistas en uñas acrílicas, manicura, pedicura, cortes, color y alisado de cabello. Servicio 100% a domicilio en Mixco, San Cristóbal y zonas aledañas.">
     <meta name="theme-color" content="#a855f7">
+
+    <!-- Google tag (gtag.js) - Analytics + Ads -->
+    <!-- TODO: Reemplazar G-XXXXXXXXXX con tu ID real de Google Analytics 4 -->
+    <!-- TODO: Reemplazar AW-XXXXXXXXX con tu ID real de Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+        gtag('config', 'AW-XXXXXXXXX');
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -48,7 +60,9 @@
         }
 
         .hero-gradient {
-            background: linear-gradient(135deg, rgba(76, 29, 149, 0.28), rgba(15, 23, 42, 0.4)), url('https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background:
+                linear-gradient(135deg, rgba(125, 211, 252, 0.35) 0%, rgba(244, 114, 182, 0.20) 50%, rgba(165, 180, 252, 0.45) 100%),
+                url('https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
         }
@@ -56,7 +70,7 @@
         .hero-gradient h1,
         .hero-gradient p,
         .hero-gradient > div > span {
-            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+            text-shadow: 0 2px 14px rgba(0, 0, 0, 0.65), 0 1px 4px rgba(0, 0, 0, 0.5);
         }
 
         .service-card:hover, .testimonial-card:hover, .gallery-item:hover {
@@ -126,6 +140,22 @@
         .specialty-badge {
             background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
         }
+
+        .logo-gradient {
+            background: linear-gradient(90deg, #d946ef 0%, #a855f7 35%, #7c3aed 65%, #2563eb 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 0 6px rgba(217, 70, 239, 0.25));
+        }
+
+        .logo-gradient-light {
+            background: linear-gradient(90deg, #f0abfc 0%, #d8b4fe 35%, #c4b5fd 65%, #93c5fd 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 0 8px rgba(240, 171, 252, 0.35));
+        }
     </style>
 </head>
 <body class="bg-violet-50 text-stone-800">
@@ -146,7 +176,7 @@
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 top-7 md:top-9">
         <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex justify-between items-center gap-3">
-            <div class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold tracking-wider uppercase serif text-stone-900 whitespace-nowrap">Lindsey <span class="text-violet-700">Nail's &amp; Beauty</span></div>
+            <div class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold tracking-wider uppercase serif text-stone-900 whitespace-nowrap">Lindsey <span class="logo-gradient">Nail's &amp; Beauty</span></div>
 
             <div class="hidden lg:flex space-x-5 xl:space-x-8 text-xs xl:text-sm font-medium uppercase tracking-wider">
                 <a href="#inicio" class="hover:text-violet-700 transition">Inicio</a>
@@ -522,7 +552,7 @@
     <footer id="contacto" class="bg-stone-900 text-white py-12 md:py-16">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-sm">
             <div class="sm:col-span-2">
-                <h3 class="text-xl md:text-2xl font-bold mb-6 serif italic">Lindsey <span class="text-pink-400">Nail's &amp; Beauty</span></h3>
+                <h3 class="text-xl md:text-2xl font-bold mb-6 serif italic">Lindsey <span class="logo-gradient-light">Nail's &amp; Beauty</span></h3>
                 <p class="text-stone-400 mb-8 max-w-xs">Belleza profesional a domicilio. Especialistas en uñas acrílicas, manicura, pedicura, peinados y color de cabello.</p>
                 <div class="flex space-x-6 text-xl">
                     <a href="https://www.instagram.com/lpch.nails/" class="hover:text-pink-400 transition" aria-label="Instagram" target="_blank">
@@ -578,6 +608,29 @@
         document.querySelectorAll('section').forEach(section => {
             section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
             observer.observe(section);
+        });
+
+        // Track de clicks en WhatsApp (Google Analytics + Google Ads conversion)
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (typeof gtag === 'function') {
+                        // Evento generico para Google Analytics 4
+                        gtag('event', 'whatsapp_click', {
+                            event_category: 'engagement',
+                            event_label: this.getAttribute('aria-label') || this.innerText.trim().substring(0, 50) || 'WhatsApp Click',
+                            value: 1
+                        });
+
+                        // Conversion para Google Ads
+                        // TODO: Cuando tengas la conversion creada en Google Ads,
+                        // descomenta esto y reemplaza AW-XXXXXXXXX/CONVERSION_LABEL con tu ID real
+                        // gtag('event', 'conversion', {
+                        //     'send_to': 'AW-XXXXXXXXX/CONVERSION_LABEL'
+                        // });
+                    }
+                });
+            });
         });
     </script>
 </body>
