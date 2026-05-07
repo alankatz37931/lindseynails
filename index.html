@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lindsey Nail's & Beauty - Uñas Acrílicas y Belleza a Domicilio</title>
     <meta name="description" content="Especialistas en uñas acrílicas, manicura, pedicura, cortes, color y alisado de cabello. Servicio 100% a domicilio en Mixco, San Cristóbal y zonas aledañas.">
+    <meta name="theme-color" content="#a855f7">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap');
 
         :root {
-            --primary: #d4a373;
-            --secondary: #faedcd;
-            --accent: #ccd5ae;
+            --primary: #a855f7;
+            --secondary: #ede9fe;
+            --accent: #f9a8d4;
             --dark: #1d1d1d;
         }
 
@@ -47,9 +48,15 @@
         }
 
         .hero-gradient {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(135deg, rgba(76, 29, 149, 0.28), rgba(15, 23, 42, 0.4)), url('https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
+        }
+
+        .hero-gradient h1,
+        .hero-gradient p,
+        .hero-gradient > div > span {
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
         }
 
         .service-card:hover, .testimonial-card:hover, .gallery-item:hover {
@@ -117,14 +124,14 @@
         }
 
         .specialty-badge {
-            background: linear-gradient(135deg, #d4a373 0%, #b8895a 100%);
+            background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
         }
     </style>
 </head>
-<body class="bg-stone-50 text-stone-800">
+<body class="bg-violet-50 text-stone-800">
 
     <!-- Announcement Bar -->
-    <div class="bg-amber-100 text-amber-900 text-[10px] md:text-xs py-2 px-3 text-center font-bold uppercase tracking-wider md:tracking-widest fixed w-full z-[60] top-0 truncate">
+    <div class="bg-violet-100 text-violet-900 text-[10px] md:text-xs py-2 px-3 text-center font-bold uppercase tracking-wider md:tracking-widest fixed w-full z-[60] top-0 truncate">
         <span class="md:hidden">✨ Belleza a Domicilio · Mixco y San Cristóbal ✨</span>
         <span class="hidden md:inline lg:hidden">✨ Lindsey Nail's &amp; Beauty · A Domicilio en Mixco y San Cristóbal ✨</span>
         <span class="hidden lg:inline">✨ Lindsey Nail's &amp; Beauty · Uñas, Cabello y Belleza a Domicilio · Mixco y San Cristóbal ✨</span>
@@ -139,19 +146,19 @@
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 top-7 md:top-9">
         <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex justify-between items-center gap-3">
-            <div class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold tracking-wider uppercase serif text-stone-900 whitespace-nowrap">Lindsey <span class="text-amber-700">Nail's &amp; Beauty</span></div>
+            <div class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold tracking-wider uppercase serif text-stone-900 whitespace-nowrap">Lindsey <span class="text-violet-700">Nail's &amp; Beauty</span></div>
 
             <div class="hidden lg:flex space-x-5 xl:space-x-8 text-xs xl:text-sm font-medium uppercase tracking-wider">
-                <a href="#inicio" class="hover:text-amber-700 transition">Inicio</a>
-                <a href="#servicios" class="hover:text-amber-700 transition">Servicios</a>
-                <a href="#estilos" class="hover:text-amber-700 transition">Estilos</a>
-                <a href="#galeria" class="hover:text-amber-700 transition">Galería</a>
-                <a href="#proceso" class="hover:text-amber-700 transition">Proceso</a>
-                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quiero%20reservar%20una%20cita%20a%20domicilio" target="_blank" class="hover:text-amber-700 transition">Contacto</a>
+                <a href="#inicio" class="hover:text-violet-700 transition">Inicio</a>
+                <a href="#servicios" class="hover:text-violet-700 transition">Servicios</a>
+                <a href="#estilos" class="hover:text-violet-700 transition">Estilos</a>
+                <a href="#galeria" class="hover:text-violet-700 transition">Galería</a>
+                <a href="#proceso" class="hover:text-violet-700 transition">Proceso</a>
+                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quiero%20reservar%20una%20cita%20a%20domicilio" target="_blank" class="hover:text-violet-700 transition">Contacto</a>
             </div>
 
             <div class="flex items-center gap-2 md:gap-4">
-                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quiero%20reservar%20una%20cita%20a%20domicilio" target="_blank" class="hidden md:block bg-stone-900 text-white px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-semibold hover:bg-amber-800 transition uppercase tracking-wider whitespace-nowrap">
+                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quiero%20reservar%20una%20cita%20a%20domicilio" target="_blank" class="hidden md:block bg-stone-900 text-white px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-semibold hover:bg-violet-800 transition uppercase tracking-wider whitespace-nowrap">
                     RESERVAR
                 </a>
                 <button onclick="toggleMobileMenu()" class="lg:hidden text-stone-900 p-2 focus:outline-none -mr-2" aria-label="Abrir menú">
@@ -174,7 +181,7 @@
                 <a href="#galeria" onclick="toggleMobileMenu()" class="text-white text-xl sm:text-2xl serif italic">Galería</a>
                 <a href="#proceso" onclick="toggleMobileMenu()" class="text-white text-xl sm:text-2xl serif italic">¿Cómo funciona?</a>
                 <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quiero%20reservar%20una%20cita%20a%20domicilio" target="_blank" class="text-white text-xl sm:text-2xl serif italic">Contacto</a>
-                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quiero%20reservar%20una%20cita%20a%20domicilio" target="_blank" class="bg-amber-100 text-stone-900 py-3 sm:py-4 rounded-full font-bold uppercase tracking-widest text-sm mt-4">AGENDAR CITA</a>
+                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quiero%20reservar%20una%20cita%20a%20domicilio" target="_blank" class="bg-violet-100 text-stone-900 py-3 sm:py-4 rounded-full font-bold uppercase tracking-widest text-sm mt-4">AGENDAR CITA</a>
             </div>
         </div>
     </div>
@@ -187,7 +194,7 @@
             <p class="text-sm sm:text-base md:text-xl mb-8 md:mb-10 font-light opacity-90 max-w-xl mx-auto px-2">En <strong>Lindsey Nail's &amp; Beauty</strong> somos especialistas en <strong>uñas acrílicas</strong>, manicura, pedicura, cortes, color y alisado de cabello. Servicio 100% a domicilio.</p>
             <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center">
                 <a href="#servicios" class="w-full sm:w-auto bg-white/20 backdrop-blur-sm text-white border border-white/30 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold hover:bg-white hover:text-stone-900 transition text-xs uppercase tracking-widest">Ver Servicios</a>
-                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quiero%20agendar%20un%20servicio%20a%20domicilio" target="_blank" class="w-full sm:w-auto bg-amber-100 text-stone-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold hover:bg-white transition text-xs uppercase tracking-widest">Agendar mi Turno</a>
+                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quiero%20agendar%20un%20servicio%20a%20domicilio" target="_blank" class="w-full sm:w-auto bg-violet-100 text-stone-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold hover:bg-white transition text-xs uppercase tracking-widest">Agendar mi Turno</a>
             </div>
         </div>
     </section>
@@ -195,60 +202,60 @@
     <!-- Services -->
     <section id="servicios" class="py-16 md:py-24 max-w-7xl mx-auto px-4 md:px-6">
         <div class="text-center mb-12 md:mb-16">
-            <span class="uppercase tracking-widest text-[10px] md:text-xs text-amber-700 font-bold">Menú Móvil</span>
+            <span class="uppercase tracking-widest text-[10px] md:text-xs text-violet-700 font-bold">Menú Móvil</span>
             <h2 class="text-3xl md:text-4xl font-bold mb-4 italic mt-2">Nuestros Servicios</h2>
-            <div class="w-16 h-1 bg-amber-600 mx-auto mb-6"></div>
+            <div class="w-16 h-1 bg-gradient-to-r from-violet-500 to-pink-500 mx-auto mb-6"></div>
             <p class="text-stone-500 max-w-2xl mx-auto italic text-sm md:text-base">Cobertura: Mixco, San Cristóbal y zonas aledañas. Otras zonas consultar recargo.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <!-- Especialidad: Uñas Acrílicas -->
-            <div class="relative bg-white p-6 md:p-8 pt-9 md:pt-10 rounded-2xl border-2 border-amber-300 service-card text-center flex flex-col justify-between shadow-md mt-3">
+            <div class="relative bg-white p-6 md:p-8 pt-9 md:pt-10 rounded-2xl border-2 border-pink-300 service-card text-center flex flex-col justify-between shadow-md mt-3">
                 <div class="absolute -top-3 left-1/2 -translate-x-1/2 specialty-badge text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-wider px-3 sm:px-4 py-1 rounded-full whitespace-nowrap shadow">★ Especialidad</div>
                 <div>
-                    <div class="w-14 h-14 bg-amber-50 rounded-full flex items-center justify-center mx-auto mb-5">
-                        <i class="fas fa-gem text-amber-700 text-xl"></i>
+                    <div class="w-14 h-14 bg-violet-50 rounded-full flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-gem text-violet-700 text-xl"></i>
                     </div>
                     <h3 class="text-lg md:text-xl font-bold mb-3">Uñas Acrílicas</h3>
                     <p class="text-stone-500 text-xs md:text-sm mb-6">Esculpidas en gel o acrílico, todo tipo de formas (almendra, coffin, stiletto). Nail art y diseños personalizados — la especialidad de la casa.</p>
                 </div>
-                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quisiera%20agendar%20U%C3%B1as%20Acr%C3%ADlicas%20a%20domicilio" target="_blank" class="inline-block text-xs font-bold uppercase tracking-widest text-stone-900 border-b-2 border-amber-400 hover:border-amber-700 transition pb-1">Agendar</a>
+                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quisiera%20agendar%20U%C3%B1as%20Acr%C3%ADlicas%20a%20domicilio" target="_blank" class="inline-block text-xs font-bold uppercase tracking-widest text-stone-900 border-b-2 border-pink-400 hover:border-violet-700 transition pb-1">Agendar</a>
             </div>
 
             <!-- Manicura & Pedicura -->
             <div class="bg-white p-6 md:p-8 rounded-2xl border border-stone-100 service-card text-center flex flex-col justify-between">
                 <div>
                     <div class="w-14 h-14 bg-stone-50 rounded-full flex items-center justify-center mx-auto mb-5 shadow-sm">
-                        <i class="fas fa-hand-sparkles text-amber-700 text-xl"></i>
+                        <i class="fas fa-hand-sparkles text-violet-700 text-xl"></i>
                     </div>
                     <h3 class="text-lg md:text-xl font-bold mb-3">Manicura & Pedicura</h3>
                     <p class="text-stone-500 text-xs md:text-sm mb-6">Manicura rusa profesional, esmaltado semipermanente y spa de pies con todo el equipo esterilizado en tu casa.</p>
                 </div>
-                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quisiera%20agendar%20Manicura%20o%20Pedicura%20a%20domicilio" target="_blank" class="inline-block text-xs font-bold uppercase tracking-widest text-stone-900 border-b-2 border-amber-200 hover:border-amber-600 transition pb-1">Agendar</a>
+                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quisiera%20agendar%20Manicura%20o%20Pedicura%20a%20domicilio" target="_blank" class="inline-block text-xs font-bold uppercase tracking-widest text-stone-900 border-b-2 border-violet-200 hover:border-violet-600 transition pb-1">Agendar</a>
             </div>
 
             <!-- Cortes & Peinados -->
             <div class="bg-white p-6 md:p-8 rounded-2xl border border-stone-100 service-card text-center flex flex-col justify-between">
                 <div>
                     <div class="w-14 h-14 bg-stone-50 rounded-full flex items-center justify-center mx-auto mb-5 shadow-sm">
-                        <i class="fas fa-cut text-amber-700 text-xl"></i>
+                        <i class="fas fa-cut text-violet-700 text-xl"></i>
                     </div>
                     <h3 class="text-lg md:text-xl font-bold mb-3">Cortes & Peinados</h3>
                     <p class="text-stone-500 text-xs md:text-sm mb-6">Cortes femeninos a medida y peinados sencillos para el día a día. Cambia tu look sin salir de casa.</p>
                 </div>
-                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quisiera%20agendar%20Corte%20o%20Peinado%20a%20domicilio" target="_blank" class="inline-block text-xs font-bold uppercase tracking-widest text-stone-900 border-b-2 border-amber-200 hover:border-amber-600 transition pb-1">Agendar</a>
+                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quisiera%20agendar%20Corte%20o%20Peinado%20a%20domicilio" target="_blank" class="inline-block text-xs font-bold uppercase tracking-widest text-stone-900 border-b-2 border-violet-200 hover:border-violet-600 transition pb-1">Agendar</a>
             </div>
 
             <!-- Color & Alisado -->
             <div class="bg-white p-6 md:p-8 rounded-2xl border border-stone-100 service-card text-center flex flex-col justify-between">
                 <div>
                     <div class="w-14 h-14 bg-stone-50 rounded-full flex items-center justify-center mx-auto mb-5 shadow-sm">
-                        <i class="fas fa-feather text-amber-700 text-xl"></i>
+                        <i class="fas fa-feather text-violet-700 text-xl"></i>
                     </div>
                     <h3 class="text-lg md:text-xl font-bold mb-3">Color & Alisado</h3>
                     <p class="text-stone-500 text-xs md:text-sm mb-6">Tinte, mechas, retoque de raíz y alisado profesional. Productos de salón aplicados con cuidado en tu casa.</p>
                 </div>
-                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quisiera%20agendar%20Tinte%20o%20Alisado%20a%20domicilio" target="_blank" class="inline-block text-xs font-bold uppercase tracking-widest text-stone-900 border-b-2 border-amber-200 hover:border-amber-600 transition pb-1">Agendar</a>
+                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Quisiera%20agendar%20Tinte%20o%20Alisado%20a%20domicilio" target="_blank" class="inline-block text-xs font-bold uppercase tracking-widest text-stone-900 border-b-2 border-violet-200 hover:border-violet-600 transition pb-1">Agendar</a>
             </div>
         </div>
     </section>
@@ -257,9 +264,9 @@
     <section id="estilos" class="py-16 md:py-24 bg-stone-50">
         <div class="max-w-7xl mx-auto px-4 md:px-6">
             <div class="text-center mb-12 md:mb-16">
-                <span class="uppercase tracking-widest text-[10px] md:text-xs text-amber-700 font-bold">Catálogo</span>
+                <span class="uppercase tracking-widest text-[10px] md:text-xs text-violet-700 font-bold">Catálogo</span>
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 italic mt-2">Elige tu Estilo de Uñas</h2>
-                <div class="w-16 h-1 bg-amber-600 mx-auto mb-6"></div>
+                <div class="w-16 h-1 bg-gradient-to-r from-violet-500 to-pink-500 mx-auto mb-6"></div>
                 <p class="text-stone-500 max-w-2xl mx-auto italic text-sm md:text-base">Escoge la forma o el estilo que más te guste y agenda directo por WhatsApp.</p>
             </div>
 
@@ -355,7 +362,7 @@
 
             <div class="text-center mt-10 md:mt-14">
                 <p class="text-stone-500 text-sm mb-4">¿Tienes una idea diferente o viste un diseño en redes?</p>
-                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Tengo%20una%20idea%20de%20dise%C3%B1o%20que%20quiero%20mostrarte" target="_blank" class="inline-block bg-stone-900 text-white px-6 md:px-8 py-3 rounded-full text-xs md:text-sm font-semibold hover:bg-amber-800 transition uppercase tracking-wider">
+                <a href="https://wa.me/50240625011?text=Hola%20Lindsey!%20Tengo%20una%20idea%20de%20dise%C3%B1o%20que%20quiero%20mostrarte" target="_blank" class="inline-block bg-stone-900 text-white px-6 md:px-8 py-3 rounded-full text-xs md:text-sm font-semibold hover:bg-violet-800 transition uppercase tracking-wider">
                     <i class="fab fa-whatsapp mr-2"></i> Mándanos tu Inspiración
                 </a>
             </div>
@@ -363,12 +370,12 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="galeria" class="py-16 md:py-24 bg-stone-100">
+    <section id="galeria" class="py-16 md:py-24 bg-gradient-to-br from-pink-50 via-violet-50 to-pink-50">
         <div class="max-w-7xl mx-auto px-4 md:px-6">
             <div class="text-center mb-12">
-                <span class="uppercase tracking-widest text-[10px] md:text-xs text-amber-700 font-bold">Portafolio</span>
+                <span class="uppercase tracking-widest text-[10px] md:text-xs text-violet-700 font-bold">Portafolio</span>
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 italic mt-2">Nuestro Trabajo</h2>
-                <div class="w-16 h-1 bg-amber-600 mx-auto mb-6"></div>
+                <div class="w-16 h-1 bg-gradient-to-r from-violet-500 to-pink-500 mx-auto mb-6"></div>
                 <p class="text-stone-500 uppercase tracking-widest text-[10px] md:text-xs">Diseños reales creados por Lindsey</p>
             </div>
 
@@ -424,7 +431,7 @@
             </div>
 
             <div class="text-center mt-12">
-                <a href="https://www.instagram.com/lpch.nails/" target="_blank" class="inline-block text-xs font-bold uppercase tracking-widest text-stone-900 border-b-2 border-amber-300 hover:border-amber-700 transition pb-1">
+                <a href="https://www.instagram.com/lpch.nails/" target="_blank" class="inline-block text-xs font-bold uppercase tracking-widest text-stone-900 border-b-2 border-pink-300 hover:border-violet-700 transition pb-1">
                     <i class="fab fa-instagram mr-2"></i> Mira más en Instagram
                 </a>
             </div>
@@ -435,19 +442,19 @@
     <section id="testimonios" class="py-16 md:py-24 bg-stone-900 text-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <span class="uppercase tracking-widest text-[10px] md:text-xs text-amber-400 font-bold">Reseñas</span>
+                <span class="uppercase tracking-widest text-[10px] md:text-xs text-pink-400 font-bold">Reseñas</span>
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 italic mt-2">Lo que dicen nuestras clientas</h2>
                 <p class="text-stone-400 uppercase tracking-widest text-xs">Experiencias Lindsey Nail's &amp; Beauty</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-stone-800 p-8 rounded-2xl testimonial-card border border-stone-700">
-                    <div class="flex text-amber-400 mb-4">
+                    <div class="flex text-pink-400 mb-4">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p class="text-stone-300 italic mb-6 leading-relaxed">"Lindsey es la mejor en acrílicas — me hace formas que no encuentro en ningún salón. Llega puntual y me deja las uñas impecables sin moverme de casa."</p>
                     <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-stone-600 flex items-center justify-center font-bold text-amber-200">V</div>
+                        <div class="w-10 h-10 rounded-full bg-stone-600 flex items-center justify-center font-bold text-pink-200">V</div>
                         <div>
                             <p class="font-bold text-sm">Valeria M.</p>
                             <p class="text-[10px] text-stone-500 uppercase tracking-tighter">Cliente Acrílicas</p>
@@ -456,12 +463,12 @@
                 </div>
 
                 <div class="bg-stone-800 p-8 rounded-2xl testimonial-card border border-stone-700">
-                    <div class="flex text-amber-400 mb-4">
+                    <div class="flex text-pink-400 mb-4">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p class="text-stone-300 italic mb-6 leading-relaxed">"Hice tinte y alisado en una sola sesión. Lindsey trajo todos los productos y la atención fue impecable — me ahorré horas de salón."</p>
                     <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-stone-600 flex items-center justify-center font-bold text-amber-200">C</div>
+                        <div class="w-10 h-10 rounded-full bg-stone-600 flex items-center justify-center font-bold text-pink-200">C</div>
                         <div>
                             <p class="font-bold text-sm">Camila R.</p>
                             <p class="text-[10px] text-stone-500 uppercase tracking-tighter">Color & Alisado</p>
@@ -470,12 +477,12 @@
                 </div>
 
                 <div class="bg-stone-800 p-8 rounded-2xl testimonial-card border border-stone-700">
-                    <div class="flex text-amber-400 mb-4">
+                    <div class="flex text-pink-400 mb-4">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p class="text-stone-300 italic mb-6 leading-relaxed">"Pedí pedicura y manicura y me cambió el día. Trae todo esterilizado y la atención es personalizada — nada que ver con un salón comercial."</p>
                     <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-stone-600 flex items-center justify-center font-bold text-amber-200">S</div>
+                        <div class="w-10 h-10 rounded-full bg-stone-600 flex items-center justify-center font-bold text-pink-200">S</div>
                         <div>
                             <p class="font-bold text-sm">Sofía L.</p>
                             <p class="text-[10px] text-stone-500 uppercase tracking-tighter">Mani + Pedi</p>
@@ -489,21 +496,21 @@
     <!-- How it works -->
     <section id="proceso" class="py-16 md:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <span class="uppercase tracking-widest text-[10px] md:text-xs text-amber-700 font-bold">Tu Experiencia</span>
+            <span class="uppercase tracking-widest text-[10px] md:text-xs text-violet-700 font-bold">Tu Experiencia</span>
             <h2 class="text-3xl md:text-4xl font-bold mb-16 italic mt-2">El Salón Móvil en 3 Pasos</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div class="space-y-4">
-                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto text-amber-800 text-2xl font-bold">1</div>
+                    <div class="w-16 h-16 bg-violet-100 rounded-full flex items-center justify-center mx-auto text-violet-800 text-2xl font-bold">1</div>
                     <h3 class="font-bold text-xl italic">Reserva</h3>
                     <p class="text-stone-500 text-sm">Escríbenos por WhatsApp y elige el servicio que deseas: uñas, manicura, peinado o color.</p>
                 </div>
                 <div class="space-y-4">
-                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto text-amber-800 text-2xl font-bold">2</div>
+                    <div class="w-16 h-16 bg-violet-100 rounded-full flex items-center justify-center mx-auto text-violet-800 text-2xl font-bold">2</div>
                     <h3 class="font-bold text-xl italic">Llegamos</h3>
                     <p class="text-stone-500 text-sm">Llegamos a tu domicilio con todo el equipo profesional y esterilizado, listas para comenzar.</p>
                 </div>
                 <div class="space-y-4">
-                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto text-amber-800 text-2xl font-bold">3</div>
+                    <div class="w-16 h-16 bg-violet-100 rounded-full flex items-center justify-center mx-auto text-violet-800 text-2xl font-bold">3</div>
                     <h3 class="font-bold text-xl italic">Disfruta</h3>
                     <p class="text-stone-500 text-sm">Relájate en tu espacio favorito mientras transformamos tu look — sin tráfico ni esperas.</p>
                 </div>
@@ -515,16 +522,16 @@
     <footer id="contacto" class="bg-stone-900 text-white py-12 md:py-16">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-sm">
             <div class="sm:col-span-2">
-                <h3 class="text-xl md:text-2xl font-bold mb-6 serif italic">Lindsey <span class="text-amber-500">Nail's &amp; Beauty</span></h3>
+                <h3 class="text-xl md:text-2xl font-bold mb-6 serif italic">Lindsey <span class="text-pink-400">Nail's &amp; Beauty</span></h3>
                 <p class="text-stone-400 mb-8 max-w-xs">Belleza profesional a domicilio. Especialistas en uñas acrílicas, manicura, pedicura, peinados y color de cabello.</p>
                 <div class="flex space-x-6 text-xl">
-                    <a href="https://www.instagram.com/lpch.nails/" class="hover:text-amber-500 transition" aria-label="Instagram" target="_blank">
+                    <a href="https://www.instagram.com/lpch.nails/" class="hover:text-pink-400 transition" aria-label="Instagram" target="_blank">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.facebook.com/Lindsey.cardona.32/" class="hover:text-amber-500 transition" aria-label="Facebook" target="_blank">
+                    <a href="https://www.facebook.com/Lindsey.cardona.32/" class="hover:text-pink-400 transition" aria-label="Facebook" target="_blank">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://wa.me/50240625011" target="_blank" class="hover:text-amber-500 transition" aria-label="WhatsApp">
+                    <a href="https://wa.me/50240625011" target="_blank" class="hover:text-pink-400 transition" aria-label="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
